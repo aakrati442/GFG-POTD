@@ -23,7 +23,4 @@ class Solution
 		// your code here
 		return construct(pre, preM, 0, size - 1, 0, size - 1);
 	}
-
-
-    
 }
