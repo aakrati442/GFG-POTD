@@ -1,0 +1,21 @@
+
+class Solution {
+    public static int getMaximum(int n, int[] arr) {
+        // code here
+            long sum = 0;
+        for(int i : arr)
+        {
+            sum += i;
+        }
+        while(n> 0)
+        {
+            if(sum % n == 0)
+            {
+                return n;
+            }
+            n--;
+        }
+        return 1;
+    }
+}
+        
