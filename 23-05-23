@@ -19,6 +19,7 @@ class Solution
 		return root;
 	}
 
+
 	public Node constructBTree(int pre[], int preM[], int size) {
 		// your code here
 		return construct(pre, preM, 0, size - 1, 0, size - 1);
