@@ -30,7 +30,6 @@ string ans = "";
                 }
             }
             reverse(num.begin(), num.end()); 
-            // and loop exit while the stack is empty our last digit which is store in the num = "02" we have to reverse it and again store in ans
             ans.append(num);
         
             return ans;
