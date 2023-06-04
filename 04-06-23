@@ -1,4 +1,4 @@
-string ans = ""; // string which store our ans
+string ans = ""; 
             stack<char> st; //stack for reversing the string 
             for (int i = 0; i < s.length(); i++) // input in the stack
             {
