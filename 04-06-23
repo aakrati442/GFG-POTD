@@ -17,7 +17,7 @@ string ans = "";
                     num.push_back(st.top());
                     st.pop();
                 }
-                //if we found any operator sym the we do reverse of our number then add to our ans variable with operator
+                
                 else {
         
                     sym.push_back(st.top()); // take the operator
