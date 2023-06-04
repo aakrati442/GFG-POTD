@@ -1,6 +1,6 @@
 string ans = ""; 
             stack<char> st;
-            for (int i = 0; i < s.length(); i++) // input in the stack
+            for (int i = 0; i < s.length(); i++) 
             {
                 st.push(s[i]);
             }
