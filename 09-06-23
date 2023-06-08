@@ -1,0 +1,18 @@
+map<string, bool> mp;
+	void permut(string& s, int idx)
+	{
+	    int n = s.size();
+	    if (idx == n)
+	    {
+	        mp[s] = 1;
+	        return;
+	    }
+	    char c = s[idx];
+	    for (int i = idx; i < n; i++)
+	    {
+	        swap(s[idx], s[i]);
+	        permut(s, idx + 1);
+	        swap(s[idx], s[i]);
+	    }
+	    return;
+	}
