@@ -16,3 +16,15 @@ map<string, bool> mp;
 	    }
 	    return;
 	}
+	vector<string>find_permutation(string S)
+		{
+		    // Code here there
+		     // Code here there
+	    permut(S, 0);
+	    vector<string> ans;
+	    for (auto it = mp.begin(); it != mp.end(); it++)
+	    {
+	        ans.push_back(it->first);
+	    }
+	    return ans;
+		}
