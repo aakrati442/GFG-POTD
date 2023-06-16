@@ -1,4 +1,5 @@
-class Geeks{
+class Geeks
+{
     static void insert(Queue<Integer> q, int k){
         q.offer(k);
     }
