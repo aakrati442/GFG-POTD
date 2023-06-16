@@ -1,6 +1,7 @@
 class Geeks
 {
-    static void insert(Queue<Integer> q, int k){
+    static void insert(Queue<Integer> q, int k)
+    {
         q.offer(k);
     }
     static int findFrequency(Queue<Integer> q, int k){
