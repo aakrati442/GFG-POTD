@@ -4,7 +4,8 @@ class Solution
     {
         int start =1;
         int end = N;
-        while((end-start)>=K){
+        while((end-start)>=K)
+        {
             start+=K;
             if((end-start)<K){
                 return start;  
