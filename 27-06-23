@@ -1,0 +1,25 @@
+class Sol
+{
+	public static Node findUnion(Node head1,Node head2)
+	{
+	    LinkedHashSet<Integer> s=new LinkedHashSet<Integer>();
+        while(head1!=null){
+        s.add(head1.data);
+        head1=head1.next;
+        }
+        while(head2!=null){
+        s.add(head2.data);
+        head2=head2.next;
+        }
+        ArrayList<Integer> l=new ArrayList<Integer>(s);
+        Collections.sort(l);
+        Node n=new Node(l.get(0));
+        Node t=n;
+        for(int i=1;i<l.size();i++){
+            t.next=new Node(l.get(i));
+            t=t.next;
+        }
+        return n;
+	    //Add your code here.
+	}
+}
