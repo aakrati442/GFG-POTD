@@ -9,9 +9,6 @@ int odd=0;
         }
         int delta=even-odd;
         if(delta%3==0)
-
         return 1;
-
         else
-
         return 0;
