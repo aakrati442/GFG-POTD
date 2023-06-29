@@ -8,7 +8,6 @@ int odd=0;
              odd+=bit;
         }
         int delta=even-odd;
-
         if(delta%3==0)
 
         return 1;
