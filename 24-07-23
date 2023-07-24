@@ -1,0 +1,18 @@
+ vector<int> ans;
+       queue<Node*> q;
+       q.push(root);
+       while(q.empty()==false){
+           ans.push_back(q.back()->data);
+           int k = q.size();
+           while(k--){
+               Node* curr = q.front();
+               q.pop();
+               if(curr->left!=NULL){
+                   q.push(curr->left);
+               }
+               if(curr->right!=NULL){
+                   q.push(curr->right);
+               }
+           }    
+       }
+       return ans;
