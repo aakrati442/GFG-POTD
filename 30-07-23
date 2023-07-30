@@ -1,0 +1,13 @@
+Node *suc=NULL;
+        while(root!=NULL){
+            if(x->data>=root->data){ // "= condition cheak when we approach x node"
+                root=root->right;
+            
+            }
+            else {suc=root;
+                root=root->left;
+                // suc=root;
+            }
+            
+        }
+        return suc;
