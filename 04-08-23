@@ -1,0 +1,16 @@
+class Solution{
+public:
+    queue<int> q;
+    void Reverse(stack<int> &St){
+        if(St.size() == 0){
+            return;
+        }
+        q.push(St.top());
+        St.pop();
+        
+        Reverse(St);
+        
+        cout<<q.front()<<" ";
+        q.pop();
+    }
+};
