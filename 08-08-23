@@ -1,0 +1,51 @@
+class Solution {
+    public static int countFractions(int n, int[] numerator, int[] denominator) {
+        // code here
+        Map<Pair, Integer> mp = new HashMap<>();
+        int count = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int k = gcd(numerator[i], denominator[i]);
+            int num = numerator[i] / k;
+            int den = denominator[i] / k;
+            int co_num = den - num;
+            Pair pair = new Pair(co_num, den);
+            count += mp.getOrDefault(pair, 0);
+            mp.put(new Pair(num, den), mp.getOrDefault(new Pair(num, den), 0) + 1);
+        }
+        
+        return count;
+    }
+    
+     private static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    
+    private static class Pair {
+        int first;
+        int second;
+        
+        Pair(int first, int second) {
+            this.first = first;
+            this.second = second;
+        }
+        
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Pair pair = (Pair) o;
+            return first == pair.first && second == pair.second;
+        }
+        
+        @Override
+        public int hashCode() {
+            return Objects.hash(first, second);
+        }
+    }
+}
