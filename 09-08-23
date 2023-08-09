@@ -10,5 +10,8 @@ public:
                 if(N==1) break;
             }else{
                 fact++;
+            }
+        }
+        return fact;
     }
 };
