@@ -12,7 +12,7 @@ class Solution
                sr+=m[i][j],sc+=m[j][i];
            }
            sm=max(sm,max(sr,sc));
-       }
+    }
        return (sm*n)-sum;
     } 
 };
