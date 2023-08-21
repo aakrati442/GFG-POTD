@@ -2,7 +2,6 @@ class Solution
 {
     public:
     //Function to find minimum number of operations that are required 
-    //to make the matrix beautiful.
     int findMinOpeartion(vector<vector<int> > m, int n)
     {
         // code here 
