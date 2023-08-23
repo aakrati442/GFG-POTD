@@ -1,0 +1,88 @@
+class Solution {
+public:
+	vector<vector<int>>searchWord(vector<vector<char>>grid, string s){
+	    // Code here
+	    vector<vector<int>> v;
+        int n=grid.size();
+        int m=grid[0].size();
+        int k=s.size();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i][j]==s[0]){
+                    int w=1;
+                    while(w<k && i+w<n && grid[i+w][j]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && j+w<m && grid[i][j+w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && i-w>=0 && grid[i-w][j]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && j-w>=0 && grid[i][j-w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && i+w<n  && j+w<m && grid[i+w][j+w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && i+w<n && j-w>=0 && grid[i+w][j-w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && i-w>=0 && j-w>=0  && grid[i-w][j-w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                    
+                     w=1;
+                    while(w<k && i-w>=0 && j+w<m && grid[i-w][j+w]==s[w])
+                        w++;
+                    if(w==k){
+                        vector<int> t={i,j};
+                        v.push_back(t);
+                        continue;
+                    }
+                }
+            }
+        }
+        return v;
+	}
+};
