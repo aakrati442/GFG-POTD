@@ -1,7 +1,7 @@
 class Solution{
   public:
     int longestKSubstr(string s, int k) {
-    // your code
+    // your 
       unordered_map<char,int>mp;
         int i=0,j=0;
         int ans=INT_MIN;
