@@ -1,6 +1,6 @@
 class Reverse
 {
-    // Complete the function
+    // Complete the
     public static String reverseWord(String str)
     {
         // Reverse the string str
