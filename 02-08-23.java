@@ -1,4 +1,3 @@
-
 class Solution {
     int shortestDistance(int N, int M, int A[][], int X, int Y) {
         int count=0;
