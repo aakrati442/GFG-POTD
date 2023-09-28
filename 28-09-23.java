@@ -6,7 +6,6 @@ class Solution {
                 a[i] = a[i+1];
                 a[i+1] = temp;
             }
-
             else if(a[i] > a[i+1] && i%2 !=0){
                 int t = a[i];
                 a[i] = a[i+1];
