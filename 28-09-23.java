@@ -1,7 +1,7 @@
 class Solution {
     public static void convertToWave(int n, int[] a) {
         // code here
-        // arr[1] >= arr[2] <= arr[3] >= arr[4] <= arr[5].....        
+         
             for(int i=0;i<n-1;i++){
             if(a[i] < a[i+1] && i%2==0){ 
             // if current element index no is even and smaller than next element then swap both;
