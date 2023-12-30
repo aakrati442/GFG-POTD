@@ -1,0 +1,14 @@
+TreeMap<String, Integer> tm = new TreeMap<>();
+        
+        for(String str : arr)  tm.put(str, tm.getOrDefault(str, 0)+1);
+        
+        String winnerName = "";
+        int winnerVotes = Integer.MIN_VALUE;
+        for(String key : tm.keySet()){
+            if(tm.get(key) > winnerVotes){
+                winnerName = key;
+                winnerVotes = tm.get(key);
+            }
+        }
+        
+        return new String[]{winnerName, String.valueOf(winnerVotes)};
