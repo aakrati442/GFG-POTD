@@ -1,0 +1,27 @@
+long sum = 0;
+        long max1 = Integer.MIN_VALUE;
+        int j = 0;
+        long rahee = 0;
+        for(int i = 0; i< n;i++)
+        {
+            sum += a[i];
+            
+            if(i - j + 1 == k)
+            {
+                max1 = Math.max(max1,sum);
+            }
+            else if(i - j + 1 > k)
+            {
+                rahee += a[j];
+                j++;
+            
+             if(rahee < 0)
+            {
+               sum -= rahee;
+               rahee = 0;
+            }
+            
+            max1 = Math.max(max1,sum);
+            }
+        }
+            return max1;
