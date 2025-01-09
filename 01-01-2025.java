@@ -4,6 +4,7 @@ Map<String,Map<Character,Integer>> hm=new HashMap<>();
             for(char c:s.toCharArray()) mp.put(c,mp.getOrDefault(c,0)+1);
             hm.put(s,mp);
         }
+
         ArrayList<ArrayList<String>> al=new ArrayList<>();
         for(String s:arr){
             if(al.isEmpty()){
