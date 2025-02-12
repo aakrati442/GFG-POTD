@@ -10,7 +10,6 @@ class Solution {
         inorder(root.right,k,pq);
     }
     public int kthSmallest(Node root, int k) {
-        // Write your code here
         PriorityQueue<Integer> pq=new PriorityQueue<>((a,b)->b-a);
         inorder(root,k,pq);
         
