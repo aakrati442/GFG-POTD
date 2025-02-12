@@ -1,5 +1,4 @@
 class Solution {
-    // Return the Kth smallest element in the given BST
     private void inorder(Node root,int k,PriorityQueue<Integer> pq){
         if(root==null)return;
         
