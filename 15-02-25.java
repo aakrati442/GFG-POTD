@@ -17,3 +17,4 @@ if(n1.data == root.data || n2.data == root.data)
         {
             return root;
         }
+}
